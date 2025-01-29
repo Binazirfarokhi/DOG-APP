@@ -1,39 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- add MVP.css -->
-    <link rel="stylesheet" href="https://unpkg.com/mvp.css"> 
-    
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css" />
+    <script src="./main.js" defer></script>
+
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>The app for pets</h1>
+      <h1>The app for pets</h1>
     </header>
     <main>
-        <section>
-            <form action="" id="from1">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="dob">Date of Birth</label>
-                <input type="date" id="dob" name="dob" required>
-                <select name="" id="petType">
-                    <option value="Cat">Cat</option>
-                    <option value="Dog">Dog</option>
-                </select>
-                <label for="petBreed">Pet Breed</label>
-                <select name="" id="petBreed">
-                    <!-- to be populated by js. if the user choose cat or dog it will geretare the breed for the user and it will be done by JS -->
-                </select>
-                <button type="submit">Add pet</button>
-
-            </form>
-
-        </section>
-        <section></section>
+      <section>
+        <form action="" id="from1">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="dob" required />
+          <select name="" id="petType" required>
+            <option value="Cat">Cat</option>
+            <option value="Dog">Dog</option>
+          </select>
+          <label for="petBreed">Pet Breed</label>
+          <select name="" id="petBreed" required>
+            <!-- to be populated by js. if the user choose cat or dog it will geretare the breed for the user and it will be done by JS -->
+          </select>
+          <button type="submit">Add pet</button>
+        </form>
+      </section>
+      <hr />
+      <hr />
+      <section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date of birth</th>
+                    <th>Pet Type</th>
+                    <th>Pet Breed</th>
+                </tr>
+            </thead>
+            <tbody id="petTableBoddy">
+                <!-- to be populated by js -->
+            </tbody>
+        </table>
+      </section>
     </main>
-    
-</body>
+  </body>
 </html>
