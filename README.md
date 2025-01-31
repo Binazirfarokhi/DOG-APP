@@ -14,4 +14,4 @@ defer will first load the whole html (DOM) and then load the JS. that's why we a
 Add a style to your html without adding a style: 
 https://andybrewer.github.io/mvp/
 
- <h1>Test</h1>
+ <h1>Markdown review in readme.md</h1>

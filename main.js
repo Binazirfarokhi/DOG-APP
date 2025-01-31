@@ -34,8 +34,26 @@ petType.addEventListener('change', function(){
 // we need to create a class to pass the values form form to the constructor of the class to ctreate onject of pets
 
 class Pet{ 
-    
+    // this referenc to our object that we are going to create
+    constructor(name,dob,petBreed,petType){
+        this.name = name;
+        this.dob = dob;
+        this.petBreed = petBreed;
+        this.petType = petType;
+
+
+    }
+// create a method to generate the row for my table to  add my objects in my table after adding each pet
+generateTableRow(){
+    const row = document.createElement("tr");
+    row.innerHTML =`<td>${this.name}</td><td>${this.dob}</td><td>${this.petBreed}</td><td>${this.petType}</td>`
+    return;
 }
+
+
+}
+// create the array to push all the pet object in it
+const petArray = [];
 document.getElementById("form1").addEventListener("submit", function(e){
     e.preventDefault();
     const name = document.getElementById("name").value;
@@ -43,5 +61,12 @@ document.getElementById("form1").addEventListener("submit", function(e){
     const petType = document.getElementById("petType").value;
     const petBreed = document.getElementById("petBreed").value;
 
+// create the object  from the clas
+// we should add the properties in the same order as class
+const pet = new Pet(name,dob,petBreed,petType);
+// push the object in the array
+petArray.push(pet);
+
 
 })
+// inorder to use the method in my class i need to create a function
