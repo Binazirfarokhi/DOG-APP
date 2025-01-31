@@ -17,10 +17,11 @@
       <section>
         <form action="" id="from1">
           <label for="name">Name:</label>
-          <input type="text" id="name" name="name"  />
+          <input type="text" id="name" name="name" required />
           <label for="dob">Date of Birth</label>
-          <input type="date" id="dob" name="dob"  />
+          <input type="date" id="dob" name="dob" required />
           <select name="" id="petType" required>
+            <option value="" selected disabled>-- Select --</option>
             <option value="Cat">Cat</option>
             <option value="Dog">Dog</option>
           </select>

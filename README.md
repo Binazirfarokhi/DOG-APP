@@ -13,3 +13,5 @@ we are going to use a mvp.css for our styleing as a framework for css
 defer will first load the whole html (DOM) and then load the JS. that's why we are adding defer. if  iam going to the have an eventlistener we need to see the dom first
 Add a style to your html without adding a style: 
 https://andybrewer.github.io/mvp/
+
+ <h1>Test</h1>
