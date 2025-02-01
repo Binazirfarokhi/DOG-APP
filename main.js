@@ -70,3 +70,7 @@ petArray.push(pet);
 
 })
 // inorder to use the method in my class i need to create a function
+function renderTable(){
+    const table = document.getElementById("table1");
+
+}
