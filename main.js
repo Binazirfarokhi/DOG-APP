@@ -47,15 +47,18 @@ class Pet{
 generateTableRow(){
     const row = document.createElement("tr");
     row.innerHTML =`<td>${this.name}</td><td>${this.dob}</td><td>${this.petBreed}</td><td>${this.petType}</td>`
-    return;
+    return row;
 }
 
 
 }
 // create the array to push all the pet object in it
 const petArray = [];
+// cannot read the peropoerty of null before addevent listener means there is a problem before the addeventlistner
+
 document.getElementById("form1").addEventListener("submit", function(e){
     e.preventDefault();
+    // alert("fsdsdv")
     const name = document.getElementById("name").value;
     const dob = document.getElementById("dob").value;
     const petType = document.getElementById("petType").value;
@@ -66,11 +69,24 @@ document.getElementById("form1").addEventListener("submit", function(e){
 const pet = new Pet(name,dob,petBreed,petType);
 // push the object in the array
 petArray.push(pet);
+// we should render the table as well
+renderTable();
 
 
 })
 // inorder to use the method in my class i need to create a function
 function renderTable(){
-    const table = document.getElementById("table1");
+    const petTableBoddy = document.getElementById("table1");
+    // petTableBoddy.innerHTML = "";
+    // for each of the objects inside the array
+    // petArray.forEach(pet => {
+    //     const row = pet.generateTableRow();
+    //     petTableBoddy.appendChild(row);
+    //     });
 
+    for (const pet of petArray){
+        const row = pet.generateTableRow();
+        petTableBoddy.appendChild(row);
+
+    }
 }
